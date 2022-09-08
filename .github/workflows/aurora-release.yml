@@ -50,7 +50,7 @@ jobs:
         Configuration: ${{ matrix.configuration }}
 
     - name: Build
-      run: dotnot build $env:Solution_Name --configuration $env:Configuration --no-restore
+      run: dotnet build $env:Solution_Name --configuration $env:Configuration --no-restore
       env:
         APPVEYOR_BUILD_VERSION: v${{steps.buildnumber.outputs.build_number}}
         OWNER: ${{ steps.split.outputs._0 }}
