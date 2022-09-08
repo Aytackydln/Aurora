@@ -38,23 +38,19 @@ jobs:
         submodules: true
 
       # Install the .NET Core workload
-    - name: Install .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
-
-      # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
-    - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@v1.0.2
+    #- name: Install .NET Core
+    #  uses: actions/setup-dotnet@v1
+    #  with:
+    #    dotnet-version: 6.0.x
 
       # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
-      run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
+      run: dotnet restore
       env:
         Configuration: ${{ matrix.configuration }}
 
     - name: Build
-      run: msbuild $env:Solution_Name /p:Configuration=$env:Configuration
+      run: dotnot build $env:Solution_Name --configuration $env:Configuration --no-restore
       env:
         APPVEYOR_BUILD_VERSION: v${{steps.buildnumber.outputs.build_number}}
         OWNER: ${{ steps.split.outputs._0 }}

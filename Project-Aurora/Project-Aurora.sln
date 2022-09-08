@@ -25,8 +25,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorBox", "ColorBox\ColorB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin-Example", "Plugin-Example\Plugin-Example.csproj", "{DAE33996-53E3-46A3-8F06-CBAF0AFE3708}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SBAuroraReactive", "..\SBAuroraR.NET\SBAuroraReactive\SBAuroraReactive.vcxproj", "{053A704B-5C79-4CDE-B1FC-B952051ACAA0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,10 +59,6 @@ Global
 		{DAE33996-53E3-46A3-8F06-CBAF0AFE3708}.Debug|x64.Build.0 = Debug|x64
 		{DAE33996-53E3-46A3-8F06-CBAF0AFE3708}.Release|x64.ActiveCfg = Release|x64
 		{DAE33996-53E3-46A3-8F06-CBAF0AFE3708}.Release|x64.Build.0 = Release|x64
-		{053A704B-5C79-4CDE-B1FC-B952051ACAA0}.Debug|x64.ActiveCfg = Debug|x64
-		{053A704B-5C79-4CDE-B1FC-B952051ACAA0}.Debug|x64.Build.0 = Debug|x64
-		{053A704B-5C79-4CDE-B1FC-B952051ACAA0}.Release|x64.ActiveCfg = Release|x64
-		{053A704B-5C79-4CDE-B1FC-B952051ACAA0}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
