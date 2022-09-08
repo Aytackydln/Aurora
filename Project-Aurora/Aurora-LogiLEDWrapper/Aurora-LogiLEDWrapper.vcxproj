@@ -14,7 +14,7 @@
     <ProjectGuid>{20259BE1-55C9-4EFB-9D30-C933F621B9D4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>AuroraLogiLEDWrapper</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform Condition="'$(Platform)' == ''">x64</Platform>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -121,7 +121,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-  <Target Name="AfterBuild">
-    <MSBuild Condition=" '$(Platform)' == 'x64' " Projects="$(MSBuildProjectFile)" Properties="Platform=Win32;PlatFormTarget=Win32" RunEachTargetSeparately="true" />
-  </Target>
 </Project>
