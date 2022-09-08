@@ -59,7 +59,7 @@ jobs:
         Configuration: ${{ matrix.configuration }}
 
     - name: Build msbuild
-      run: msbuild Project-Aurora/Project-Aurora-MSBuild.sln /p:Configuration=$env:Configuration
+      run: msbuild Project-Aurora/Project-Aurora-MSBuild.sln /p:Configuration=$env:Configuration /p:Platform=x64
       env:
         Configuration: ${{ matrix.configuration }}
 
