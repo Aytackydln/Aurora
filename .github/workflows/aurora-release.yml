@@ -53,8 +53,13 @@ jobs:
       env:
         Configuration: ${{ matrix.configuration }}
 
-    - name: Build msbuild
+    - name: Restore msbuild
       run: msbuild Project-Aurora/Project-Aurora-MSBuild.sln /t:Restore /p:Configuration=$env:Configuration
+      env:
+        Configuration: ${{ matrix.configuration }}
+
+    - name: Build msbuild
+      run: msbuild Project-Aurora/Project-Aurora-MSBuild.sln /p:Configuration=$env:Configuration
       env:
         Configuration: ${{ matrix.configuration }}
 
